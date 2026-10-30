@@ -1,0 +1,15 @@
+# compiled object files
+*.o
+
+# the built program
+expense_tracker
+
+# your personal data (created when you run the program)
+expenses.csv
+budget.txt
+
+# hidden files and folders (.vscode/, .DS_Store, .env, etc)
+.*
+
+# ...but keep this file tracked
+!.gitignore
