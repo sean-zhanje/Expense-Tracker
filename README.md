@@ -28,13 +28,16 @@ How the pieces connect: `main.c` calls the modes, and the modes use `input`, `st
 
 ## Requirements
 
-- `gcc`
+- A C compiler: **`gcc` or `clang`** (either one works)
 - `make`
 
-On Ubuntu / WSL you can install both with:
+Both compilers accept the flags used in the Makefile (`-Wall -Wextra -std=c99 -g`), so you can use whichever you have installed.
+
+On Ubuntu / WSL:
 
 ```
-sudo apt install build-essential
+sudo apt install build-essential   # gcc + make
+sudo apt install clang             # optional, if you want clang instead
 ```
 
 ## Build and run
@@ -57,6 +60,17 @@ Other commands:
 ```
 make clean    # remove the compiled files
 ```
+
+### Choosing a compiler
+
+The Makefile uses `cc` by default (on most Linux / WSL setups that points to gcc). To pick a specific compiler:
+
+```
+make CC=gcc
+make CC=clang
+```
+
+If you switch compilers, run `make clean` first so old object files aren't reused.
 
 ## How to use it
 

@@ -1,4 +1,4 @@
-CC      = gcc
+CC      ?= cc
 CFLAGS  = -Wall -Wextra -std=c99 -g
 OBJS    = main.o input.o storage.o budget.o modes.o
 HEADERS = $(wildcard *.h)
